@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <title>Workada by bbggu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
     <section class="page-header">
@@ -51,7 +48,44 @@
       </footer>
 
     </section>
-
-  
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script>
+		var cb = function ()
+		{
+			var e  = document.createElement('link');
+			e.rel  = 'stylesheet';
+			e.href = 'stylesheet.css';
+			var h  = document.getElementsByTagName('head')[0];
+			h.parentNode.insertBefore(e, h);
+		};
+		var r = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (r) r(cb);
+		else window.addEventListener('load', cb);
+	</script>
+  <script>
+		console.log('started!');
+		var g=[
+			{'s':'jquery-3.0.0.js','a':false}
+		];
+		!function ()
+		{
+			var r = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame,
+			c = function ()
+			{
+				for (var i = 0, e, k; i < g.length; i++)
+				{
+					e = document.createElement('script');
+					k = g[i];
+					e.src = k.s;
+					e.async = k.a;
+					document.body.appendChild(e);
+				}
+				return true;
+			};
+			if (r) r(c);
+			else window.addEventListener ? window.addEventListener('load', c) : window.attachEvent ? window.attachEvent('onload', c) : window.onload = c;
+		}();
+	</script>
   </body>
 </html>
